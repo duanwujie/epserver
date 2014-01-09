@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/YW/!svn/ver/2861/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/libs
+END
+libmysqlcppconn.so
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/YW/!svn/ver/2861/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/libs/libmysqlcppconn.so
+END
+libglog.a
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/YW/!svn/ver/2861/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/libs/libglog.a
+END
+libglog.so
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/YW/!svn/ver/2861/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/libs/libglog.so
+END
+liblua52.so
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/YW/!svn/ver/2861/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/libs/liblua52.so
+END
+libev.a
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/YW/!svn/ver/2861/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/libs/libev.a
+END
+libev.so
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/YW/!svn/ver/2861/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/libs/libev.so
+END

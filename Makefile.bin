@@ -1,0 +1,75 @@
+
+#
+# makefile
+#
+
+# which c plus plus compiler
+CPP     = ccache g++
+
+# which c compiler
+CC      = ccache cc
+
+# options for compiler
+CFLAGS  = -Wall -Werror
+
+# flags of buildhouse
+BHFLAGS	= 
+#-D_BUILD_HOUSE_GMAE
+
+# is debug? (for development)
+CDEBUG  = -g -DDEBUG -D_RBV_TEST -D_BUILDHOUSE_LONGLONG
+
+# macro
+CMACRO	= 
+#-D_OLD_MAKEHOUSE_GAME
+
+# objects
+OBJS    = 	main.o \
+		    Single.o \
+		    handler/HandleCartoon.o \
+		    handler/HandleExercise.o \
+		    handler/HandleClassRoom.o \
+		    handler/HandleSprite.o \
+		    handler/HandleBuildHouse.o \
+		    handler/HandlePuzzle.o \
+		    handler/HandleMessage.o \
+		    handler/HandleRainbowValley.o \
+			handler/task/BHSyncTask.o \
+		    content/course.o \
+		    content/courseitem.o \
+		    content/teacher.o \
+		    content/room.o \
+		    content/grade.o \
+		    content/game.o \
+		    content/student.o \
+		    content/roommanager.o \
+		    content/LoginCheck.o \
+		    content/makehouse.o \
+		    content/puzzle.o \
+			content/DataTool.o
+
+# binary
+BIN	    = server
+
+# where are include files kept
+INC	    = -I. -I./includes -I./includes/sfk -I./handler -I./content -I./handler/task
+
+# for Linker
+LINK        = libs/libmanager.so libs/libauth.so libs/libtp.so libs/libtk.so libs/libdb.so libs/libconfirm.so libs/libconfig.so libs/libevl.so libs/libutils.so libs/libev.a libs/libglog.a libs/liblua52.so libs/libmysqlcppconn.so
+#LINK        = -lev -lglog -lmysqlcppconn -llua5.2
+# rock..
+all: clean $(BIN)
+
+# how to compiling programs
+$(BIN):$(OBJS)
+#	$(CPP) $(CFLAGS) $(CDEBUG) -o $@ $(OBJS)
+	$(CPP) $(CFLAGS) $(CDEBUG) $(BHFLAGS) $(CMACRO) -o $@ $(OBJS) $(LINK)
+%.o:%.cpp
+	$(CPP) $(CFLAGS) $(CDEBUG) $(BHFLAGS) $(CMACRO) $(INC) -o $@ -c $<
+%.o:%.c
+	$(CC)  $(CFLAGS) $(CDEBUG) $(BHFLAGS) $(CMACRO) $(INC) -o $@ -c $<
+
+.PHONY: clean
+
+clean:
+	-rm -rf $(OBJS) $(BIN) *~ logs .lock

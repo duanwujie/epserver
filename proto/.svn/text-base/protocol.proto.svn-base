@@ -1,0 +1,144 @@
+// 登录。/*{{{*/
+// CT_Login
+message cLogin {
+        required int32 type     = 1;
+        required string account = 2;
+        required string passwd  = 3;
+}
+
+// ST_Login
+message sLogin {
+        required int32 result   = 1;
+}
+
+// CT_Logout
+message cLogout {
+        required int32 common   = 1;
+}
+
+// ST_Logout
+message sLogout {
+        required int32 common   = 1;
+}
+
+// CT_GetFuncList
+message cGetFuncList {
+        required int32 common   = 1;
+}
+
+// ST_GetFuncList
+// 返回的是对应权限的功能列表。
+message sGetFuncList {
+        required string content  = 1;
+}
+
+// CT_SetFunc
+message cSetFunc {
+        required int32 content   = 1;
+}
+
+// ST_SetFunc
+message sSetFunc {
+        required int32 status   = 1; // 选择是否成功。
+}
+/*}}}*/
+
+// 开始上课。/*{{{*/
+// CT_GetGradeList,
+message cGetGradeList {
+        required int32 content   = 1;
+}
+
+// ST_GetGradeList,
+message sGetGradeList { // 返回年级列表。
+        required string content = 1;
+}
+
+// CT_GetCourseList
+message cGetCourseList { // 请求学校对应的课程表。
+        required string content = 1;
+}
+
+// ST_GetCourseList
+message sGetCourseList { // 返回学校对应的课程表。
+        required int32  id              = 1;
+        required string gradeName       = 2;
+        required string courseName      = 3;
+        required int32  language        = 4;
+        required int32  art             = 5;
+        required int32  community       = 6;
+        required int32  health          = 7;
+        required int32  science         = 8;
+        required string resPath         = 9;
+}
+
+// CT_GetClassList,
+message cGetClassList {
+        required string content  = 1;
+}
+
+// ST_GetClassList,
+message sGetClassList {
+        required int32  id              = 1;
+        required string className       = 2;
+}
+
+// CT_GetClassRoomList
+message cGetClassRoomList {
+        required string content  = 1;
+}
+
+// ST_GetClassRoomList
+message sGetClassRoomList {
+        required int32  id              = 1;
+        required string classroomName   = 2;
+}
+
+// CT_SetContent
+message cSetContent {
+        required int32  classId         = 1; // 班级ID
+        required int32  classroomId     = 2; // 教室ID
+        // 课程列表。
+        required string courseList      = 3;
+}
+
+// CT_GetStudentList
+message cGetStudentList {
+        required string content = 1;
+}
+
+// ST_GetStudentList
+message sGetStudentList { // 单个学生简要信息。
+        required int32  id              = 1;
+        required string name            = 2;
+        required string resPath         = 3;
+}
+
+// CT_GetStudentInfo
+message cGetStudentInfo {
+        required int32  id              = 1;
+}
+
+// ST_GetStudentInfo
+message sGetStudentInfo {
+        required int32  id              = 1;
+        required string number          = 2;
+        required string name            = 3;
+        required string sex             = 4;
+        required string race            = 5;
+}
+
+// CT_GetTeacherInfo
+message cGetTeacherInfo {
+        required int32  id              = 1;
+}
+
+// ST_GetTeacherInfo
+message sGetTeacherInfo {
+        required int32  id              = 1;
+        required string number          = 2;
+        required string name            = 3;
+        required string sex             = 4;
+        required string race            = 5;
+}
+/*}}}*/

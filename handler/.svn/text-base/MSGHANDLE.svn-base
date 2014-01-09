@@ -1,0 +1,2 @@
+    MSGNAME (CT_Test, handleTest);
+    MSGNAME (CT_Login, handleLogin);

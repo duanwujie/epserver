@@ -1,0 +1,8 @@
+message Auth
+{
+	required int32 auth_id = 1;
+	required string auth_msg = 2;
+	required bool is_auth = 3;
+}
+
+message Heart {}

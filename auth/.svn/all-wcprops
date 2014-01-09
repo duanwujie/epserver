@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/auth
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/auth/Makefile
+END
+tags
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/auth/tags
+END
+client.c
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/auth/client.c
+END
+sock.c
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/auth/sock.c
+END
+sock.h
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/auth/sock.h
+END
+authServer.c
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/auth/authServer.c
+END

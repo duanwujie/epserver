@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/includes/lua5.2
+END
+lauxlib.h
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/includes/lua5.2/lauxlib.h
+END
+lua.h
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/includes/lua5.2/lua.h
+END
+lua.hppp
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/includes/lua5.2/lua.hppp
+END
+luaconf.h
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/includes/lua5.2/luaconf.h
+END
+lualib.h
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/includes/lua5.2/lualib.h
+END

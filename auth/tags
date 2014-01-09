@@ -1,0 +1,18 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+_SOCK_H_	sock.h	2;"	d
+main	authServer.c	/^int main (int argc, char** argv)$/;"	f
+main	client.c	/^int main (int argc, char** argv)$/;"	f
+main	client2.c	/^int main (int argc, char** argv)$/;"	f
+password	sock.h	/^    char    password[64];$/;"	m	struct:sAuthInfo
+recv_n	sock.c	/^ssize_t recv_n(int fd,$/;"	f
+recv_v	sock.c	/^int recv_v(int fd,$/;"	f
+sAuthInfo	sock.h	/^typedef struct sAuthInfo$/;"	s
+sAuthInfo	sock.h	/^} sAuthInfo;$/;"	t	typeref:struct:sAuthInfo
+send_n	sock.c	/^ssize_t send_n(int fd,$/;"	f
+send_v	sock.c	/^int send_v(int fd,$/;"	f
+username	sock.h	/^    char    username[64];$/;"	m	struct:sAuthInfo
