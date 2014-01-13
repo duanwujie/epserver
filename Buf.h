@@ -38,11 +38,13 @@ public:
         }
     }
 
-    Buf (Buf& b)
+    Buf (Buf& rhs)
     {
-        m_size = b.m_size;
+        m_size = rhs.m_size;
+        m_used = rhs.m_used;
+        m_fd = rhs.getfd();
         this->m_ptr = malloc (m_size);
-        memcpy (this->m_ptr, b.m_ptr, m_size);
+        memcpy (this->m_ptr, rhs.m_ptr, m_size);
     };
 
     void* ptr ()
@@ -90,10 +92,15 @@ public:
         m_id = id;
     }
 
-    Buf& operator=  (Buf& b)
+    Buf& operator=(Buf& rhs)
     {
-        memcpy (this->m_ptr, b.ptr (), m_size);
-        return *this;
+            if (this != &rhs) {
+                    memcpy (this->m_ptr, rhs.ptr (), m_size);
+                    m_fd = rhs.getfd();
+                    m_used = rhs.size();
+            }
+
+            return *this;
     }
 
 private:

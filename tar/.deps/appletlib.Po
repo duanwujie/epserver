@@ -1,0 +1,1 @@
+appletlib.o: appletlib.cpp

@@ -1,0 +1,25 @@
+
+
+
+.AES
+
+
+Nr=6+max(Nb,Nk)
+
+Nb:明文区块长度
+Nk:密文区块长度
+Example:
+    明文及密文長度：128 bits
+    Nb = 128/32 =4;
+    Nk = 128/32 =4;
+
+    Nr = 6 + max(Nb,Nk) =10
+    
+
+
+
+             Key Exapand Routine
+Chiper Key ------------------------> Round Key
+    
+
+

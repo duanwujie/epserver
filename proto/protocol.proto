@@ -8,7 +8,7 @@ message cLogin {
 
 // ST_Login
 message sLogin {
-        required int32 result   = 1;
+        required bool result   = 1;
 }
 
 // CT_Logout
@@ -23,23 +23,25 @@ message sLogout {
 
 // CT_GetFuncList
 message cGetFuncList {
-        required int32 common   = 1;
+        required string content  = 1;
 }
 
 // ST_GetFuncList
 // 返回的是对应权限的功能列表。
 message sGetFuncList {
-        required string content  = 1;
+        required int32  id       = 3;
+        required string name     = 1;
+        required string res_path = 2;
 }
 
 // CT_SetFunc
 message cSetFunc {
-        required int32 content   = 1;
+        required int32 func_type = 1; // 选择功能类型。
 }
 
 // ST_SetFunc
 message sSetFunc {
-        required int32 status   = 1; // 选择是否成功。
+        required bool   result   = 1; // 返回服务器是否设置成功。
 }
 /*}}}*/
 
@@ -51,67 +53,110 @@ message cGetGradeList {
 
 // ST_GetGradeList,
 message sGetGradeList { // 返回年级列表。
-        required string content = 1;
+        required int32  grade_id   = 1;
+        required string grade_name = 2;
+        /*
+           required int32  course_id  = 3;
+           required string course_name= 4;
+           required string course_type= 5;
+           required int32  laguage    = 6;
+           required int32  art        = 7;
+           required int32  community  = 8;
+           required int32  health     = 9;
+           required int32  science    = 10;
+           required string resPath    = 11;
+         */
 }
 
 // CT_GetCourseList
-message cGetCourseList { // 请求学校对应的课程表。
-        required string content = 1;
+message cGetCourseList { // 请求年级对应的课程表。
+        required int32 grade_id = 1;
 }
 
 // ST_GetCourseList
 message sGetCourseList { // 返回学校对应的课程表。
-        required int32  id              = 1;
-        required string gradeName       = 2;
-        required string courseName      = 3;
-        required int32  language        = 4;
-        required int32  art             = 5;
-        required int32  community       = 6;
-        required int32  health          = 7;
-        required int32  science         = 8;
-        required string resPath         = 9;
+        required int32  course_id   = 1;
+        required string course_name = 2;
+        required int32  language    = 3;
+        required int32  art         = 4;
+        required int32  community   = 5;
+        required int32  health      = 6;
+        required int32  science     = 7;
+        required string res_path    = 8;
+}
+
+// CT_GetContent,
+message cGetContent {
+        required string common    = 1;
+}
+
+// ST_GetContent,
+message sGetContent {
+        required bool   result      = 1;
+        required string course_list = 2;
 }
 
 // CT_GetClassList,
 message cGetClassList {
-        required string content  = 1;
+        required int32  grade_id        = 1;
 }
 
 // ST_GetClassList,
 message sGetClassList {
-        required int32  id              = 1;
-        required string className       = 2;
+        required int32  class_id        = 1;
+        required string class_name      = 2;
 }
 
 // CT_GetClassRoomList
 message cGetClassRoomList {
-        required string content  = 1;
+        required string content         = 1;
 }
 
 // ST_GetClassRoomList
 message sGetClassRoomList {
-        required int32  id              = 1;
-        required string classroomName   = 2;
+        required int32  classroom_id    = 1;
+        required string classroom_name  = 2;
 }
 
 // CT_SetContent
 message cSetContent {
-        required int32  classId         = 1; // 班级ID
-        required int32  classroomId     = 2; // 教室ID
+        required int32  class_id         = 1; // 班级ID
+        required int32  classroom_id     = 2; // 教室ID
         // 课程列表。
-        required string courseList      = 3;
+        required string course_list      = 3;
+}
+
+// ST_SetContent
+message sSetContent {
+        required bool   result          = 1;
+        required string msg             = 2;
 }
 
 // CT_GetStudentList
 message cGetStudentList {
-        required string content = 1;
+        required int32 class_id = 1;
 }
 
 // ST_GetStudentList
 message sGetStudentList { // 单个学生简要信息。
         required int32  id              = 1;
         required string name            = 2;
-        required string resPath         = 3;
+        required string res_path        = 3;
+}
+
+// CT_GetActiveStudentList,
+message cGetActiveStudentList {
+        required int32  class_id      = 1;
+}
+
+// ST_GetActiveStudentList,
+message sGetActiveStudentList {
+        required int32  id      = 1;
+}
+
+// ST_UpdateStudentStatus,
+message sUpdateStudentStatus {
+        required int32  student_id      = 1;
 }
 
 // CT_GetStudentInfo
@@ -126,6 +171,9 @@ message sGetStudentInfo {
         required string name            = 3;
         required string sex             = 4;
         required string race            = 5;
+        required string birthday        = 6;
+        required string native          = 7;
+        required string class_name      = 8;
 }
 
 // CT_GetTeacherInfo
@@ -140,5 +188,8 @@ message sGetTeacherInfo {
         required string name            = 3;
         required string sex             = 4;
         required string race            = 5;
+        required string birthday        = 6;
+        required string native          = 7;
+        required string school_name     = 8;
 }
 /*}}}*/

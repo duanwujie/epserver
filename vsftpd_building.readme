@@ -1,0 +1,36 @@
+
+1. sudo apt-get install vsftpd
+2. sudo cat > /etc/vsftpd.conf << END
+anonymous_enable=YES
+#local_enable=YES
+write_enable=YES
+#local_umask=022
+#anon_umask=777
+#anon_umask=022
+anon_upload_enable=YES
+anon_umask=022
+anon_mkdir_write_enable=YES
+dirmessage_enable=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+chown_uploads=YES
+xferlog_file=/var/log/vsftpd.log
+xferlog_std_format=YES
+ls_recurse_enable=YES
+listen=YES
+#chroot_list_enable=YES
+#chroot_local_enable=YES
+pam_service_name=vsftpd
+#tcp_wrappers=YES
+anon_world_readable_only=no
+anon_other_write_enable=YES
+anon_root=/var/ftp
+chown_uploads=YES
+chown_username=ftp
+END
+
+3. sudo mkdir -v /var/ftp
+
+4. sudo mkdir -v /var/ftp/SOURCES
+
+5. sudo chown ftp /var/ftp/SOURCES

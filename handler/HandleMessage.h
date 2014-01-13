@@ -14,10 +14,10 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-#include "protocol.h"
-#include "Single.h"
-#include "Buf.h"
-#include "SQL.h"
+#include "../protocol.h"
+#include "../Single.h"
+#include "../Buf.h"
+#include "../SQL.h"
 
 using namespace std;
 

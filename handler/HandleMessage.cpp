@@ -7,17 +7,12 @@
 #include "protocol.h"
 #include "Buf.h"
 #include "Single.h"
+#include "../message/proto/protocol.pb.h"
 
 /////////////////////
 HANDLEMAP CHandleMessage::m_HandleMap;
 
-#if 1
-void CHandleMessage::handleTest (Buf* p)
-{
-    cout << "CT_Test\n";
-    //todo:
-}
-#endif
+
 
 /*
 =====================

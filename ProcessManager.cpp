@@ -14,6 +14,19 @@
 #include "ProcessManager.h"
 #include "confirm.hpp"
 
+
+/**
+ * @brief Usage
+ */
+void ProcessManager::Usage()
+{
+        printf("Usage:       epServer -u\n");
+        printf("             epServer -d\n");
+        printf("             epServer -s\n");
+        printf("             epServer -v\n");
+}
+
+
 /**
 * @brief 
 */
@@ -42,14 +55,15 @@ ProcessManager::~ProcessManager()
 int ProcessManager::process_logic (int argc, char** argv)
 {
     //设置信号处理
-    signal (SIGINT, SIG_IGN);
+    signal (SIGINT, sig_int);
     signal (SIGPIPE, SIG_IGN);
     signal (SIGQUIT, SIG_IGN);
     signal (SIGTERM, sig_term);
 
     int opt = getopt (argc, argv, "udsv");
     if ( -1 == opt) {
-        printf("argv error\n");
+        //printf("argv error\n");
+        Usage();
         return -1;
     }
 
@@ -138,6 +152,17 @@ void ProcessManager::sig_term (int signo)
     raise (SIGRTMIN);
     //m_thrpool->kill ();
     return;
+}
+
+
+/**
+* @brief 
+*
+* @param signo
+*/
+void ProcessManager::sig_int (int signo)
+{
+        _exit(-1);
 }
 
 /**

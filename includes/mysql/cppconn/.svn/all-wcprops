@@ -3,6 +3,30 @@ svn:wc:ra_dav:version-url
 V 154
 /svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/includes/mysql/cppconn
 END
+exception.h
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/includes/mysql/cppconn/exception.h
+END
+connection.h
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/includes/mysql/cppconn/connection.h
+END
+metadata.h
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/includes/mysql/cppconn/metadata.h
+END
+parameter_metadata.h
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/includes/mysql/cppconn/parameter_metadata.h
+END
 build_config.h
 K 25
 svn:wc:ra_dav:version-url
@@ -62,28 +86,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 163
 /svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/includes/mysql/cppconn/driver.h
-END
-exception.h
-K 25
-svn:wc:ra_dav:version-url
-V 166
-/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/includes/mysql/cppconn/exception.h
-END
-connection.h
-K 25
-svn:wc:ra_dav:version-url
-V 167
-/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/includes/mysql/cppconn/connection.h
-END
-metadata.h
-K 25
-svn:wc:ra_dav:version-url
-V 165
-/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/includes/mysql/cppconn/metadata.h
-END
-parameter_metadata.h
-K 25
-svn:wc:ra_dav:version-url
-V 175
-/svn/YW/!svn/ver/2860/w.003.%E5%B9%BC%E6%95%99%E5%B9%B3%E5%8F%B0%E7%BB%98%E7%94%BB%E7%89%88/02.%E6%9C%8D%E5%8A%A1%E5%99%A8/epServer/includes/mysql/cppconn/parameter_metadata.h
 END

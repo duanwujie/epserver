@@ -1,0 +1,64 @@
+
+#
+# makefile
+#
+#
+# which c plus plus compiler
+CPP     = ccache g++
+
+# which c compiler
+CC      = ccache cc 
+
+# options for compiler
+CFLAGS  = -Wall -fPIC -Werror
+LIBFLAGS= -shared -W1,-soname
+
+# is debug? (for development)
+CDEBUG  = -g -DDEBUG -D_RBV_TEST -D_BUILDHOUSE_LONGLONG
+
+# objects
+TPOBJS  = 	ThreadPool.o
+CFMOBJS	= 	confirm.o
+TKOBJS	=   RecvTask.o SendTask.o
+DBOBJS	=   database.o
+MANOBJS =   ProcessManager.o
+CFGOBJS =   Config.o
+EVOBJS	=   Evloop.o
+UTILOBJS=   Sock.o
+AUTHOBJS=   AuthTask.o
+
+# binary
+BIN	    = libtp.so libconfirm.so libtk.so libdb.so libmanager.so libconfig.so libevl.so libutils.so libauth.so
+
+# where are include files kept
+INC	    = -I. -I./includes -I./handler -I./content -I./handler/task
+
+# rock..
+all: clean $(BIN)
+
+# how to compiling programs
+libmanager.so:$(MANOBJS)
+	$(CPP) $(LIBFLAGS),$@ -o $@ $(MANOBJS)
+libtp.so:$(TPOBJS)
+	$(CPP) $(LIBFLAGS),$@ -o $@ $(TPOBJS)
+libconfirm.so:$(CFMOBJS)
+	$(CPP) $(LIBFLAGS),$@ -o $@ $(CFMOBJS)
+libtk.so:$(TKOBJS)
+	$(CPP) $(LIBFLAGS),$@ -o $@ $(TKOBJS)
+libdb.so:$(DBOBJS)
+	$(CPP) $(LIBFLAGS),$@ -o $@ $(DBOBJS)
+libconfig.so:$(CFGOBJS)
+	$(CPP) $(LIBFLAGS),$@ -o $@ $(CFGOBJS)
+libevl.so:$(EVOBJS)
+	$(CPP) $(LIBFLAGS),$@ -o $@ $(EVOBJS)
+libutils.so:$(UTILOBJS)
+	$(CPP) $(LIBFLAGS),$@ -o $@ $(UTILOBJS)
+libauth.so:$(AUTHOBJS)
+	$(CPP) $(LIBFLAGS),$@ -o $@ $(AUTHOBJS)
+%.o:%.cpp
+	$(CPP) $(CFLAGS) $(INC) -o $@ -c $<
+
+.PHONY: clean
+
+clean:
+	-rm -rf $(MANOJBS) $(DBOBJS) $(CFGOBJS) $(EVOBJS) $(UTILOBJS) $(AUTHOBJS) $(TKOBJS) $(TPOBJS) $(CFMOBJS) $(BIN) *~ logs .lock

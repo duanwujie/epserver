@@ -25,7 +25,7 @@ ssize_t send_n(int fd,
         if (0 >= i) {
             break;
         } else {
-            ssize_t len = send(fd, buf + recved, left, 0);
+            ssize_t len = send(fd, (void*)((char*)buf + recved), left, 0);
             if(0 == len){
                 break;
             }
@@ -55,7 +55,7 @@ ssize_t recv_n(int fd,
         if (0 >= i) {
             break;
         } else {
-            ssize_t len = recv(fd, buf + recved, left, 0);
+            ssize_t len = recv(fd, (void*)((char*)buf + recved), left, 0);
             if(0 == len){
                 break;
             }
@@ -78,7 +78,7 @@ int send_v(int fd,
 
     int sended = 0;
     while(0 != left) {
-            int len = send(fd, buf + sended, left, 0);
+            int len = send(fd, (void*)((char*)buf + sended), left, 0);
             if (EAGAIN == errno) {
                 usleep (100);
                 continue;
@@ -108,7 +108,7 @@ int recv_v(int fd,
 
     int recved = 0;
     while(0 != left) {
-            int len = recv(fd, (char*)buf + recved, left, 0);
+            int len = recv(fd, (void*)((char*)buf + recved), left, 0);
             if (EAGAIN == errno) {
                 usleep (100);
                 continue;

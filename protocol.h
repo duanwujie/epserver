@@ -42,6 +42,9 @@ enum CommandType {
         // 设置上课内容。设置课程，班级，教室。
         CT_SetContent,
         ST_SetContent,
+
+        CT_GetContent,
+        ST_GetContent,
 /*}}}*/
         // 开始上课。/*{{{*/
         CT_StartClass = 200,
@@ -51,6 +54,13 @@ enum CommandType {
         CT_GetStudentList,
         ST_GetStudentList,
 
+        // 获取在线学生列表。教师点击上课时由教师端或学生端主动请求的活动学生列表。
+        CT_GetActiveStudentList,
+        ST_GetActiveStudentList,
+
+        // 当晚来的学生登录并选择学校功能时，需要将该学生的上线信息通知给该教室内上课的其它学生。
+        ST_UpdateStudentStatus,
+
         // 获取学生详细信息。
         CT_GetStudentInfo,
         ST_GetStudentInfo,
@@ -59,6 +69,24 @@ enum CommandType {
         CT_GetTeacherInfo,
         ST_GetTeacherInfo,
         /*}}}*/
+};
+
+enum LoginType {
+        LT_USER,
+        LT_HEADMASTER,
+        LT_TEACHER,
+        LT_PARENTS,
+        LT_STUDENT,
+        LT_WHITEBOARD,
+};
+
+enum FuncType {
+        FT_INVALID,
+        FT_PERSONAL = 1,
+        FT_SCHOOL,
+        FT_FAMILY,
+        FT_FRIEND,
+        FT_OFFICE,
 };
 
 // 下面是所有用到的数据结构体

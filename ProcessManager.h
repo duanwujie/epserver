@@ -61,11 +61,25 @@ class ProcessManager
          */
         int run ();
 
+
+        /**
+         * @brief 使用提示
+         */
+        void Usage();
+
         /**
          * @brief 信号处理函数
          * @param signo 信号
          */
         static void sig_term (int signo);
+
+
+        /**
+         * @brief 信号处理函数
+         *
+         * @param signo
+         */
+        static void sig_int (int signo);
 
     private:
         /**
